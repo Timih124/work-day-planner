@@ -52,7 +52,7 @@
             var times = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"]
             var militaryTime = [9, 10, 11, 12, 13, 14, 15, 16, 17]
 
-// for loop for the time and highlight the color to indicate past, present, future
+// for loop for the time and highlight the color to indicate past, present,
      for(let i = 0; i < times.length; i++) {
            var colorClass = "" 
 
@@ -67,20 +67,19 @@
           }
 
       $("#schedule").append(`
-                <div id="calendar-row2 class="${times[i]}">
+                <div id="calendar-row" class="${times[i]}">
                 <div id="10am"class="col-md-1"> ${times[i]} </div>
-                <textarea row="3 id="text-input" class="col-md-10 description ${colorClass}" placeholder="fill in yourschedule"></textarea>
-                <button id="save" class="btn col-md-1 saveBtn"><i class="fas fa-save"></i></button>
+                <textarea row="3 id="text-input" class="col-md-10  description ${colorClass}" placeholder="fill in yourschedule"></textarea>
+                <button id="save" class="col-md-1 saveBtn"><i class="far fa-save"></i></button>
         </div>`)
      }
      
-     $("#save").on("click", function(){
-       var time = $(this).parent().attr();
-       var text= $(this).siblings().val;
-       
+     $(".saveBtn").on("click", function(){
+     userInput = $(this).siblings("#text-input").val().trim();
+     // cosnole.log(userInput);
+    localStorage.setItem(${times[i]}, JSON.stringify(userInput));
 
-       localStorage.setItem(time, text);
-     })
+     });
        
  // what needs to go in localstorage is time selected and activity
  // populate when render 
