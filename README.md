@@ -28,10 +28,6 @@ WHEN I refresh the page
 
 I wanted try to mimimize as much repeated work in this. I went with a DOM munipulation method to structure the project. Allowing the array and text input area.  I was doing fine until it came to saving. That got me stuck for little bit. I had fun with this one.
 
-Screenshots
-
-
-
 
 Links:
 Repository: https://github.com/Timih124/work-day-planner
